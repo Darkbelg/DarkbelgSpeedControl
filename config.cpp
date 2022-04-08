@@ -13,23 +13,30 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class DarkbelgSpeedControl
+	class DarkbelgsSpeedControl
 	{
 		tag= "DBSC"
 		class Functions
 		{
-            file = "Functions";
-			class addEventHandlers {
-				postInit = 1;
-			};
-
-			class eventSeatSwitchedMan{};
-			class eventGetInMan{};
-			class eventGetOutMan{};
-			class isCorrectVehicle{};
+            file = "src\Functions";
 			class addCruiseControl{};
 			class addSpeedLimiter{};
 			class resetSpeedActionId{};
 		};
+
+		class Events {
+			file = "src\Functions\Events";
+			class addEventHandlers {
+				postInit = 1;
+			};
+			class eventSeatSwitchedMan{};
+			class eventGetInMan{};
+			class eventGetOutMan{};
+		};
+
+		class Helpers {
+			file = "src\Functions\Helpers";
+			class isCorrectVehicle{};
+		}
 	};
 };
