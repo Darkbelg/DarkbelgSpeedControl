@@ -37,30 +37,46 @@ class CfgFunctions
 		class Helpers {
 			file = "src\Functions\Helpers";
 			class isCorrectVehicle{};
+			class toggleModes{};
 		};
 
 		class Actions {
 			file = "src\Functions\Actions";
 			class addCruiseControl{};
 			class addSpeedLimiter{};
+			class addPresets{};
 		};
 	};
 };
 
 class CfgUserActions
 {
-	class DBSC_CruiseControlAction // This class name is used for internal representation and also for the inputAction command.
+	class DBSC_CruiseControlAction
 	{
 		displayName = "Cruise Control Toggle";
 		tooltip = "Toggles cruise control on or off.";
 		onActivate = "call DBSC_fnc_cruiseControl";
 	};
 
-	class DBSC_SpeedLimiterAction // This class name is used for internal representation and also for the inputAction command.
+	class DBSC_SpeedLimiterAction
 	{
 		displayName = "Speed Control Toggle";
 		tooltip = "Toggles speed limiter on or off.";
 		onActivate = "call DBSC_fnc_speedLimiter";
+	};
+
+	class DBSC_ResetSpeedAction
+	{
+		displayName = "Reset Speed";
+		tooltip = "Resets the speed limiter";
+		onActivate = "player setVariable ['speed',nil,false];";
+	};
+
+	class DBSC_PresetAction
+	{
+		displayName = "Show presets";
+		tooltip = "Shows screen with the preset speeds.";
+		onActivate = "createDialog 'DBSCPresetSpeeds';";
 	};
 };
 
@@ -70,6 +86,10 @@ class UserActionGroups
 	{
 		name = "Darkbelg Speed Control"; // Display name of your category.
 		isAddon = 1;
-		group[] = {"DBSC_CruiseControlAction","DBSC_SpeedLimiterAction"}; // List of all actions inside this category.
+		group[] = {"DBSC_CruiseControlAction","DBSC_SpeedLimiterAction","DBSC_ResetSpeedAction","DBSC_PresetAction"}; // List of all actions inside this category.
 	};
 };
+
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "UI\BaseControls.hpp"
+#include "UI\DBSCPresetSpeeds.hpp"

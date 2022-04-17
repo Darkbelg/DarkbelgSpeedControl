@@ -17,4 +17,5 @@ player addEventHandler ["SeatSwitchedMan", {
 
 	call DBSC_fnc_addCruiseControl;
 	call DBSC_fnc_addSpeedLimiter;
+	call DBSC_fnc_addPresets;
 }];
