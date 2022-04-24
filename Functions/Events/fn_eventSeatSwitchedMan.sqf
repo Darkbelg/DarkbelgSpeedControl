@@ -15,6 +15,10 @@ player addEventHandler ["SeatSwitchedMan", {
 		};
 	};
 
+	if (  (player getVariable "cruiseControlActionId") >= 0) exitWith {
+		// systemChat "Nothing to add we already have actions";
+	};
+
 	call DBSC_fnc_addCruiseControl;
 	call DBSC_fnc_addSpeedLimiter;
 	call DBSC_fnc_addPresets;
