@@ -3,15 +3,18 @@ if (!([vehicle player] call DBSC_fnc_isCorrectVehicle)) exitWith {
 };
 
 getCruiseControl vehicle player params ["_speedLimit", "_cruiseControlActive"];
+DBSC_speed = parseNumber (player getVariable ["speed",speed (vehicle player)]);
 
-if (_speedLimit > 0 && _cruiseControlActive == true && player getVariable ["speed",speed (vehicle player)] <= (_speedLimit*1.3) ) exitWith {
+if (_speedLimit > 0 && _cruiseControlActive == true && DBSC_speed <= (_speedLimit*1.3) && DBSC_on_off_debug_info) exitWith {
     (vehicle player) setCruiseControl [0,false];
     systemChat "Cruise Control Deactivated";
 };
 
-if (player getVariable ["speed",speed (vehicle player)] <= 0) exitWith {
+if (DBSC_speed <= 0 && DBSC_on_off_debug_info) exitWith {
     systemChat "Not enough speed";
 };
 
-(vehicle player) setCruiseControl [player getVariable ["speed",speed (vehicle player)],true];
-systemChat format ["Cruise Control Activated at %1 km/h",ceil(player getVariable ["speed",speed (vehicle player)])];
+(vehicle player) setCruiseControl [DBSC_speed,true];
+if (DBSC_on_off_debug_info) then {
+    systemChat format ["Cruise Control Activated at %1 km/h",ceil(DBSC_speed)];
+};

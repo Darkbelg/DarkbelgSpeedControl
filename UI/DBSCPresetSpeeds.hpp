@@ -32,8 +32,8 @@ class DBSCPresetSpeeds
 		class SetSpeedPreset2: RscButton
 		{
 			idc = -1;
-			text = "35";
-			onButtonClick = "player setVariable ['speed',35,false];call DBSC_fnc_toggleModes;closeDialog 1;";
+			text = DBSC_speed_1;
+			onButtonClick = "player setVariable ['speed',DBSC_speed_1,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
 			colorText[] = {0.05,0.05,0.05,1};
@@ -46,8 +46,8 @@ class DBSCPresetSpeeds
 		class SetSpeedPreset3: RscButton
 		{
 			idc = -1;
-			text = "55";
-			onButtonClick = "player setVariable ['speed',55,false];call DBSC_fnc_toggleModes;closeDialog 1;";
+			text = DBSC_speed_2;
+			onButtonClick = "player setVariable ['speed',DBSC_speed_2,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
 			colorText[] = {0.05,0.05,0.05,1};
@@ -60,8 +60,8 @@ class DBSCPresetSpeeds
 		class SetSpeedPreset4: RscButton
 		{
 			idc = -1;
-			text = "75";
-			onButtonClick = "player setVariable ['speed',75,false];call DBSC_fnc_toggleModes;closeDialog 1;";
+			text = DBSC_speed_3;
+			onButtonClick = "player setVariable ['speed',DBSC_speed_3,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
 			colorText[] = {0.05,0.05,0.05,1};
@@ -74,8 +74,8 @@ class DBSCPresetSpeeds
 		class SetSpeedPreset5: RscButton
 		{
 			idc = -1;
-			text = "95";
-			onButtonClick = "player setVariable ['speed',95,false];call DBSC_fnc_toggleModes;closeDialog 1;";
+			text = DBSC_speed_4;
+			onButtonClick = "player setVariable ['speed',DBSC_speed_4,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
 			colorText[] = {0.05,0.05,0.05,1};
@@ -88,8 +88,8 @@ class DBSCPresetSpeeds
 		class SetSpeedPreset6: RscButton
 		{
 			idc = -1;
-			text = "125";
-			onButtonClick = "player setVariable ['speed',125,false];call DBSC_fnc_toggleModes;closeDialog 1;";
+			text = DBSC_speed_5;
+			onButtonClick = "player setVariable ['speed',DBSC_speed_5,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
 			colorText[] = {0.05,0.05,0.05,1};

@@ -1,2 +1,2 @@
-import RscText;
-import RscButton;
+class RscText;
+class RscButton;
