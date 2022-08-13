@@ -14,7 +14,7 @@ if (DBSC_speed <= 0 && DBSC_on_off_debug_info) exitWith {
     systemChat "Not enough speed";
 };
 
-(vehicle player) setCruiseControl [player getVariable ["speed",speed (vehicle player)],false];
+(vehicle player) setCruiseControl [DBSC_speed,false];
 
 if (DBSC_on_off_debug_info) then {
   systemChat format ["Speed Limiter Activated at %1 km/h",ceil(DBSC_speed)];  

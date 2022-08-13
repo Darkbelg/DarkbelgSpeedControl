@@ -1,11 +1,11 @@
 class DBSCPresetSpeeds
 {
-	idd = 1234;
+	idd = 3333;
 	class ControlsBackground
 	{
 		class Background: RscText
 		{
-			idc = -1;
+			idc = 33330;
 			x =  4.5 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
 			y =  16.5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
 			w = 14.5 * GUI_GRID_CENTER_W;
@@ -17,7 +17,8 @@ class DBSCPresetSpeeds
 	{
 		class SetSpeedPreset1: RscButton
 		{
-			idc = -1;
+
+			idc = 33331;
 			text = "Reset";
 			onButtonClick = "player setVariable ['speed',nil,false];closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
@@ -31,8 +32,8 @@ class DBSCPresetSpeeds
 		};
 		class SetSpeedPreset2: RscButton
 		{
-			idc = -1;
-			text = DBSC_speed_1;
+			idc = 33332;
+			text = "Preset 1";
 			onButtonClick = "player setVariable ['speed',DBSC_speed_1,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
@@ -45,8 +46,8 @@ class DBSCPresetSpeeds
 		};
 		class SetSpeedPreset3: RscButton
 		{
-			idc = -1;
-			text = DBSC_speed_2;
+			idc = 33333;
+			text = "Preset 2";
 			onButtonClick = "player setVariable ['speed',DBSC_speed_2,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
@@ -59,8 +60,8 @@ class DBSCPresetSpeeds
 		};
 		class SetSpeedPreset4: RscButton
 		{
-			idc = -1;
-			text = DBSC_speed_3;
+			idc = 33334;
+			text = "Preset 3";
 			onButtonClick = "player setVariable ['speed',DBSC_speed_3,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
@@ -73,8 +74,8 @@ class DBSCPresetSpeeds
 		};
 		class SetSpeedPreset5: RscButton
 		{
-			idc = -1;
-			text = DBSC_speed_4;
+			idc = 33335;
+			text = "Preset 4";
 			onButtonClick = "player setVariable ['speed',DBSC_speed_4,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
@@ -87,8 +88,8 @@ class DBSCPresetSpeeds
 		};
 		class SetSpeedPreset6: RscButton
 		{
-			idc = -1;
-			text = DBSC_speed_5;
+			idc = 33336;
+			text = "Preset 5";
 			onButtonClick = "player setVariable ['speed',DBSC_speed_5,false];call DBSC_fnc_toggleModes;closeDialog 1;";
 			colorBackground[] = {0.95,0.95,0.95,1};
 			colorFocused[] = {0.95,0.95,0.95,1};
