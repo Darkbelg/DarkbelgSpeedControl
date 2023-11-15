@@ -3,7 +3,7 @@ if (!([vehicle player] call DBSC_fnc_isCorrectVehicle)) exitWith {
 };
 
 getCruiseControl vehicle player params ["_speedLimit", "_cruiseControlActive"];
-DBSC_speed = parseNumber (player getVariable ["speed",speed (vehicle player)]);
+DBSC_speed = (player getVariable ["speed",speed (vehicle player)]) call BIS_fnc_parseNumber;
 
 if (_speedLimit > 0 && _cruiseControlActive == false && _speedLimit >= parseNumber(player getVariable ["speed",_speedLimit]) && DBSC_on_off_debug_info) exitWith {
     (vehicle player) setCruiseControl [0,false];
