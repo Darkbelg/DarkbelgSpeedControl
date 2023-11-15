@@ -65,6 +65,7 @@ class CfgUserActions
 		displayName = "Cruise Control Toggle";
 		tooltip = "Toggles cruise control on or off.";
 		onActivate = "if (isNull objectParent player || is3DEN) exitWith {}; if ((assignedVehicleRole player)#0 != 'driver') exitWith {}; call DBSC_fnc_cruiseControl";
+		modifierBlocking=0;
 	};
 
 	class DBSC_SpeedLimiterAction
@@ -72,6 +73,7 @@ class CfgUserActions
 		displayName = "Speed Control Toggle";
 		tooltip = "Toggles speed limiter on or off.";
 		onActivate = "if (isNull objectParent player || is3DEN) exitWith {}; if ((assignedVehicleRole player)#0 != 'driver') exitWith {}; call DBSC_fnc_speedLimiter";
+		modifierBlocking=0;
 	};
 
 	class DBSC_ResetSpeedAction
@@ -79,6 +81,7 @@ class CfgUserActions
 		displayName = "Reset Speed";
 		tooltip = "Resets the speed limiter";
 		onActivate = "if (isNull objectParent player || is3DEN) exitWith {}; if ((assignedVehicleRole player)#0 != 'driver') exitWith {}; player setVariable ['speed',nil,false];";
+		modifierBlocking=0;
 	};
 
 	class DBSC_PresetAction
@@ -86,6 +89,7 @@ class CfgUserActions
 		displayName = "Show presets";
 		tooltip = "Shows screen with the preset speeds.";
 		onActivate = "if (isNull objectParent player || is3DEN) exitWith {}; if ((assignedVehicleRole player)#0 != 'driver') exitWith {}; createDialog 'DBSCPresetSpeeds';";
+		modifierBlocking=0;
 	};
 };
 
