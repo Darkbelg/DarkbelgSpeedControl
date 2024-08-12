@@ -5,3 +5,4 @@
 ["DBSC_speed_3", "EDITBOX", ["Set preset speed 3", "Set preset speed in km/h."], "Darkbelg Speed Control", "75"] call CBA_fnc_addSetting;
 ["DBSC_speed_4", "EDITBOX", ["Set preset speed 4", "Set preset speed in km/h."], "Darkbelg Speed Control", "95"] call CBA_fnc_addSetting;
 ["DBSC_speed_5", "EDITBOX", ["Set preset speed 5", "Set preset speed in km/h."], "Darkbelg Speed Control", "125"] call CBA_fnc_addSetting;
+["DBSC_audio_feedback", "CHECKBOX", ["Set audio feedback", "Set if you want to hear the cruise control or speed limiter be activated or deactivated."], "Darkbelg Speed Control", true] call CBA_fnc_addSetting;

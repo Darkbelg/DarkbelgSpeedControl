@@ -13,6 +13,37 @@ class CfgPatches
 	};
 };
 
+class CfgSounds
+{
+    class DBSC_cruise_control_activated
+    {
+        name = "cruise_control_activated";
+        sound[] = {"darkbelg_speed_control\src\media\cruise_control_activated.ogg", 1, 1, 1};
+		titles[] = {};
+    };
+
+	class DBSC_cruise_control_deactivated
+    {
+        name = "cruise_control_deactivated";
+        sound[] = {"darkbelg_speed_control\src\media\cruise_control_deactivated.ogg", 1, 1, 1};
+		titles[] = {};
+    };
+
+	class DBSC_speed_limiter_activated
+    {
+        name = "speed_limiter_activated";
+        sound[] = {"darkbelg_speed_control\src\media\speed_limiter_activated.ogg", 1, 1, 1};
+		titles[] = {};
+    };
+
+	class DBSC_speed_limiter_deactivated
+    {
+        name = "speed_limiter_deactivated";
+        sound[] = {"darkbelg_speed_control\src\media\speed_limiter_deactivated.ogg", 1, 1, 1};
+		titles[] = {};
+    };
+};
+
 class CfgFunctions
 {
 	class DarkbelgsSpeedControl
@@ -20,14 +51,14 @@ class CfgFunctions
 		tag= "DBSC";
 		class Functions
 		{
-            file = "src\Functions";
+            file = "darkbelg_speed_control\src\Functions";
 			class resetSpeedActionId{};
 			class cruiseControl{};
 			class speedLimiter{};
 		};
 
 		class Events {
-			file = "src\Functions\Events";
+			file = "darkbelg_speed_control\src\Functions\Events";
 			class addEventHandlers {
 				postInit = 1;
 			};
@@ -37,20 +68,28 @@ class CfgFunctions
 		};
 
 		class Helpers {
-			file = "src\Functions\Helpers";
+			file = "darkbelg_speed_control\src\Functions\Helpers";
 			class isCorrectVehicle{};
 			class toggleModes{};
 		};
 
 		class Actions {
-			file = "src\Functions\Actions";
+			file = "darkbelg_speed_control\src\Functions\Actions";
 			class addCruiseControl{};
 			class addSpeedLimiter{};
 			class addPresets{};
 		};
-				
+
+		class Icons {
+			file = "darkbelg_speed_control\src\Functions\Icons";
+			class speedLimiterActivatedIcon {};
+			class speedLimiterDeactivatedIcon {};
+			class cruiseControlActivatedIcon {};
+			class cruiseControlDeactivatedIcon {};
+		}
+
 		class Settings {
-			file = "src\Functions\Settings";
+			file = "darkbelg_speed_control\src\Functions\Settings";
 			class addSettings {
 				preInit = 1;
 			};
